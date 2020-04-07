@@ -1,0 +1,136 @@
+
+
+//======================================================
+.header
+	padding: 0 10px
+	@media screen and (max-width: $md3)
+		position: fixed
+		z-index: 50
+		width: 100%
+		background: rgba(255, 255, 255, 0.8)
+	&__wrapper
+		max-width: 1140px
+		margin: 0 auto
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 56px
+	&__logo
+		position: absolute
+		top: 0
+		cursor: pointer
+		z-index: 50
+		transition: $an
+		&:hover
+			opacity: 0.3
+	&__nav
+		width: 100%
+	&__nav-list
+		display: flex
+		justify-content: space-between
+		@media screen and (max-width: $md3)
+			display: block
+			margin: 30px 0 0 0
+	&__nav-item
+		&:nth-child(2)
+			margin: 0 380px 0 0
+			@media screen and (max-width: $md2)
+				margin: 0 280px 0 0
+			@media screen and (max-width: $md3)
+				margin: 0
+	&__nav-link
+		display: flex
+		transition: $an
+
+		color: #000000
+		font-family: "PT Sans"
+		font-size: 14px
+		font-weight: 700
+		line-height: 26px
+		text-transform: uppercase
+		@media screen and (max-width: $md3)
+			padding: 15px 0 0
+		&:hover
+			color: #81b3d2
+	&__bascket-img
+		margin: 0 30px 0 0
+		@media screen and (max-width: $md2)
+			margin: 0 10px 0 0
+	&__buscket-link
+		text-transform: uppercase
+		font-size: 16px
+		line-height: 30px
+		font-weight: 500
+		color: #000
+	&__buscket-title
+		text-transform: uppercase
+		font-size: 16px
+		line-height: 30px
+		font-weight: 500
+		color: #000
+.bascket__nav-link
+	text-transform: uppercase
+	font-size: 16px
+	line-height: 30px
+	font-weight: 500
+	color: #000
+	transition: $an
+	&:hover
+		color: #fb565a
+
+.icon-menu
+	@media screen and (max-width: $md3)
+		display: block
+		position: absolute
+		top: 19px
+		right: 15px
+		width: 30px
+		height: 18px
+		cursor: pointer
+		z-index: 5
+		span 
+			top: 8px
+			left: 0
+			position: absolute
+			width: 100%
+			height: 2px
+			background-color: #000
+			&:first-child
+				top: 0
+			&:last-child
+				top: auto
+				bottom: 0
+
+		&.active
+			span
+				background-color: #000
+				transform: scale(0)
+				&:first-child
+					top: 8px
+					transform: rotate(-45deg)
+				&:last-child 
+					bottom: 8px
+					transform: rotate(45deg)
+.header-menu
+	display: none
+	@media screen and (max-width: $md3)
+		display: block
+		position: fixed
+		width: 100%
+		height: 100%
+		overflow: auto
+		left: -120%
+		top: 0
+		background: #fff
+		padding: 95px 10px 20px 10px
+		-webkit-transition: all 0.5s
+		transition: all 0.5s 
+	&.active 
+		left: 0
+		z-index: 1	
+.buscket-icon
+	width: 15px
+	height: 15px
+	&:hover
+		fill: #fb565a
+		stroke: #fb565a

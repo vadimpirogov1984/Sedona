@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nerds</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+      	<div class="header__wrapper">
+      		<div class="header__logo">
+      			<a href="index.html"><img src="images/logo/logo.png" alt=""></a>
+      		</div>
+      		<div class="header__nav">
+      			<nav class="header__menu menu">
+      				<div class="menu__icon icon-menu">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                    </div>
+                  <div class="header-menu"></div>
+      				<ul class="header__nav-list">
+      					<li class="header__nav-item active">
+      						<a href="#" class="header__nav-link artmenu">Информация</a>
+      					</li>
+      					<li class="header__nav-item">
+      						<a href="#" class="header__nav-link">Фото и видео</a>
+      					</li>
+      					<li class="header__nav-item">
+      						<a href="catalog.html" class="header__nav-link">Карта штата</a>
+      					</li>
+      					<li class="header__nav-item">
+      						<a href="hotels.html" class="header__nav-link">Гостиницы</a>
+      					</li>
+      				</ul>
+      			</nav>
+      		</div>
+      	</div>
+      </header>
+      <main>
+        <div class="hotels__filter">
+          <div class="filter__img ibg"><img src="images/hotels/filter_background.jpg" alt=""></div>
+          <div class="container">
+            <div class="filter__content">
+              <div class="check__boxes">
+                <div class="check__block">
+                  <div class="check__title">Инфраструктура:</div>
+                  <div class="check__checkbox">
+                    <ul>
+                      <li>
+                        <input type="checkbox" name="check__checkbox" id="check__checkbox1" checked>
+                        <label for="check__checkbox1" >Бассейн</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check__checkbox" id="check__checkbox2">
+                        <label for="check__checkbox2" >Парковка</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check__checkbox" id="check__checkbox3" >
+                        <label for="check__checkbox3" >Wi-Fi</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="check__block">
+                  <div class="check__title">Тип жилья:</div>
+                  <div class="check__checkbox">
+                    <ul>
+                      <li>
+                        <input type="checkbox" name="check__checkbox" id="check__checkbox12" checked>
+                        <label for="check__checkbox12" >Гостиница</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check__checkbox" id="check__checkbox22" checked>
+                        <label for="check__checkbox22" >Мотель</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="check__checkbox" id="check__checkbox23" checked checked>
+                        <label for="check__checkbox23" >Апартаменты</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>       
+              <div class="range__block">
+                <div class="range__title">Стоимость в сутки (Р):</div>
+                <div class="slider__amount">
+                  <div class="from">
+                    <label for="amount">ОТ</label>
+                    <input type="text" id="amount" >
+                  </div>
+                  <div class="to">
+                    <label for="amount_1">ДО</label>
+                    <input type="text" id="amount_1" >
+                  </div>
+                </div>
+                <div class="slider__range-block">
+                  <div id="slider-range"></div>
+                </div>
+                <p class="range__btn ">
+                  <button class="btn btn-t">Показать</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cadrs__block">
+          <div class="container">
+            <div class="hotels__content">
+              <div class="content__body-content">
+                <div class="content__title">
+                  <div class="right__block-2">
+                    <div class="middle__block">
+                        <div class="content__subtitle">Найдено: 3</div>
+                        <div class="middle__block-title">Сортировка:</div>
+                        <div class="middle__block-radio">     
+                          <input type="radio" name="middle__block" id="middle__block1" checked>
+                          <label for="middle__block1" id="price">По цене</label>
+                        </div>
+            
+                        <div class="middle__block-radio">
+                          <input type="radio" name="middle__block" id="middle__block2">
+                          <label for="middle__block2" class="middle__block2" id="type">По типу</label>
+                        </div>
+            
+                        <div class="middle__block-radio">
+                          <input type="radio" name="middle__block" id="middle__block3">
+                          <label for="middle__block3" id="characteristic">По рейтингу</label>
+                        </div>
+                    </div>
+                    <div class="right__block">
+                      <input type="radio" name="right__block" id="right__block1">
+                      <label for="right__block1" id="sort-up" >
+                        <svg class="sort-up">
+                          <use xlink:href="images/catalog/sort.svg#sort-up">
+                          </use>
+                        </svg>
+                      </label> 
+                      <input type="radio" name="right__block" id="right__block2" checked>
+                      <label for="right__block2" id="sort-down">
+                        <svg class="sort-down">
+                          <use xlink:href="images/catalog/ab.svg#sort-down">
+                          </use>
+                        </svg>
+                      </label> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cards content__cards" id="cards">
+          <div class="cards__block-cards" data-price="4000" data-type="1" data-char="1">
+            <div class="container">
+              <div class="hotels__content">
+                <div class="block-cards__left">
+                  <div class="block-cards__img ibg">
+                    <img src="images/hotels/Layer_21.jpg" alt="">
+                  </div>
+                  <div class="cards__left-content">
+                    <a href="#" class="left-content-title">Amara Resort & Spa</a>
+                  <div class="left-content__body">
+                    <div class="left-content__hotel">
+                      <p class="content__hotel-title">Гостиница</p>
+                      <button class="content__hotel-btn btn-bsm">Подробнее</button>
+                    </div>
+                    <div class="left-content__price">
+                      <p class="content__price-title">От 4000 Р.</p>
+                      <button class="btn btn-brsm">Забронировать</button>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="block-cards__right">
+                  <div class="cards__right-img">
+                    <img src="images/hotels/★_.png" alt="">
+                    <img src="images/hotels/★_.png" alt="">
+                    <img src="images/hotels/★_.png" alt="">
+                    <img src="images/hotels/★_.png" alt="">
+                  </div>
+                  <div class="cards__right-block">Рейтинг: 8,5</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cards__block-cards" data-price="3000" data-type="2" data-char="2">
+            <div class="container">
+              <div class="hotels__content">
+                <div class="block-cards__left">
+                  <div class="block-cards__img ibg">
+                    <img src="images/hotels/Layer_89_copy.jpg" alt="">
+                  </div>
+                  <div class="cards__left-content">
+                    <a href="#" class="left-content-title">Desert Quail Inn</a>
+                  <div class="left-content__body">
+                    <div class="left-content__hotel">
+                      <p class="content__hotel-title">Мотель</p>
+                      <button class="content__hotel-btn btn-bsm">Подробнее</button>
+                    </div>
+                    <div class="left-content__price">
+                      <p class="content__price-title">От 3000 Р.</p>
+                      <button class="btn btn-brsm">Забронировать</button>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="block-cards__right">
+                  <div class="cards__right-img">
+                    <img src="images/hotels/★_.png" alt="">
+                    <img src="images/hotels/★_.png" alt="">
+                    <img src="images/hotels/★_.png" alt="">
+                  </div>
+                  <div class="cards__right-block">Рейтинг: 8,9</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cards__block-cards" data-price="2000" data-type="3" data-char="3">
+            <div class="container">
+              <div class="hotels__content">
+                <div class="block-cards__left">
+                  <div class="block-cards__img ibg">
+                    <img src="images/hotels/Layer_22.jpg" alt="">
+                  </div>
+                  <div class="cards__left-content">
+                    <a href="#" class="left-content-title">Villas at Poco Diablo</a>
+                  <div class="left-content__body">
+                    <div class="left-content__hotel">
+                      <p class="content__hotel-title">Апартаменты</p>
+                      <button class="content__hotel-btn btn-bsm">Подробнее</button>
+                    </div>
+                    <div class="left-content__price">
+                      <p class="content__price-title">От 2000 Р.</p>
+                      <button class="btn btn-brsm">Забронировать</button>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="block-cards__right">
+                  <div class="cards__right-img">
+                    <img src="images/hotels/★_.png" alt="">
+                    <img src="images/hotels/★_.png" alt="">
+                  </div>
+                  <div class="cards__right-block">Рейтинг: 9,2</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+      	<div class="container">
+      		<div class="footer__content">
+      			<div class="footer__block-left">
+      				<p class="block-left__title">#visitSEDONA</p>
+      			</div>
+      			<div class="footer__social">
+      				<a href="#" class="social__link"><img src="images/social/t.png" alt=""></a>
+      				<a href="#" class="social__link"><img src="images/social/fb-icon.png" alt=""></a>
+      				<a href="#" class="social__link"><img src="images/social/youtube.png" alt=""></a>
+      			</div>
+      			<div class="footer__block-right">
+      				<div class="block-right__title">Website by</div>
+      				<div class="block-right__img" id="my">
+      					<img src="images/logo/logo_name.png" alt="">
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </footer>
+    </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/baguetteBox.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--end script-->
+  </body>
+</html>

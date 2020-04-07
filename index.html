@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sedona</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="../dist/css/normalize.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+      	<div class="header__wrapper">
+      		<div class="header__logo">
+      			<a href="index.html"><img src="images/logo/logo.png" alt=""></a>
+      		</div>
+      		<div class="header__nav">
+      			<nav class="header__menu menu">
+      				<div class="menu__icon icon-menu">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                    </div>
+                  <div class="header-menu"></div>
+      				<ul class="header__nav-list">
+      					<li class="header__nav-item active">
+      						<a href="#" class="header__nav-link artmenu">Информация</a>
+      					</li>
+      					<li class="header__nav-item">
+      						<a href="#" class="header__nav-link">Фото и видео</a>
+      					</li>
+      					<li class="header__nav-item">
+      						<a href="catalog.html" class="header__nav-link">Карта штата</a>
+      					</li>
+      					<li class="header__nav-item">
+      						<a href="hotels.html" class="header__nav-link">Гостиницы</a>
+      					</li>
+      				</ul>
+      			</nav>
+      		</div>
+      	</div>
+      </header>
+      <main>
+        <section class="main__screen">
+          <div class="main__screen-ibg ibg">
+            <img src="images/main/background_photo.jpg" alt="">
+          </div>
+            <div class="main__screen-picture">
+              <img src="images/main/welcome.png" alt="">
+            </div>
+            <div class="main-screen__body-text">
+              <h1 class="main__screen-title">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!
+              </h1>
+              <p class="main__screen-subtitle">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+            </div>
+        </section>
+        <section class="content">
+          <div class="container">
+            <div class="block__photo">
+              <div class="photo__text">
+                <div class="photo__title">Настоящий городок</div>
+                <div class="photo__number">№1</div>
+                <div class="photo__subtitle">Седона — не аттракцион для туристов, там течёт своя жизнь</div>
+              </div>
+              <div class="photo__img ibg"><img src="images/main/Layer_10.png" alt=""></div>
+            </div>
+            <div class="block__cards">
+              <div class="cards__item">
+                <div class="item__img"><img src="images/icon/icon-1.png" alt=""></div>
+                <div class="item__title">Жильё</div>
+                <div class="item__subtitle">Рекомендуем пожить в настоящем мотеле, всё как в кино!</div>
+              </div>
+              <div class="cards__item">
+                <div class="item__img"><img src="images/icon/icon-2.png" alt=""></div>
+                <div class="item__title">Еда</div>
+                <div class="item__subtitle">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</div>
+              </div>
+              <div class="cards__item">
+                <div class="item__img"><img src="images/icon/icon-3.png" alt=""></div>
+                <div class="item__title">Сувениры</div>
+                <div class="item__subtitle">Не только китайского, но и местного производства!</div>
+              </div>
+            </div>
+            <div class="block__photo">
+              <div class="photo__text photo__text-2">
+                <div class="photo__title">Там есть Мост дьявола</div>
+                <div class="photo__number">№2</div>
+                <div class="photo__subtitle">Да, по нему можно пройти! Если конечно вы осмелитесь</div>
+              </div>
+              <div class="photo__img ibg"><img src="images/main/Layer_5.png" alt=""></div>
+            </div>
+            <div class="block__cards">
+              <div class="cards__item">
+                  <div class="cards__title">Красивая дорога</div>
+                  <div class="cards__number">№4</div>
+                  <div class="cards__subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</div>
+              </div>
+              <div class="cards__item">
+                  <div class="cards__title">Красивая дорога</div>
+                  <div class="cards__number">№5</div>
+                  <div class="cards__subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</div>
+              </div>
+              <div class="cards__item">
+                  <div class="cards__title">Красивая дорога</div>
+                  <div class="cards__number">№6</div>
+                  <div class="cards__subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</div>
+              </div>
+            </div>
+            <div class="contacts">
+              <div class="container">
+                <div class="contacts__body">
+                  <div class="contacts__body-title">Заинтересовались?</div>
+                  <div class="contacts__body-subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</div>
+                  <button class="btn btn-br">ПОИСК ГОСТИНИЦЫ В седоне</button>
+                    <div class="popup">
+                      <div class="popup__container">
+                        <form сlass="form" id="form" name="form">
+                          <div class="cbform__field" >
+                            <label for="name">Дата заезда:</label>
+                            <input type="text" name="date__in" placeholder="4 июля 2017">
+                            <svg class="my1" >
+                                <use href="images/icon/sprite.svg#calendar" ></use>
+                            </svg>
+                          </div>
+                          <div class="cbform__field">
+                            <label for="email">Дата выезда:</label>
+                            <input type="text" name="date__out" placeholder="4 июля 2017">
+                            <svg class="my1">
+                              <use href="images/icon/sprite.svg#calendar" ></use>
+                            </svg>
+                          </div>
+                          <div class="cbform__field">
+                            <div class="cbform__field-1">
+                              <div class="field__title">Взрослые:</div>
+                              <div class="field__change">
+                                <div class="change__minus minus">-</div>
+                                <div class="change__number">2</div>
+                                <div class="change__pluse pluse">+</div>
+                              </div>
+                            </div>
+                            <div class="cbform__field-2">
+                              <div class="field__title">Дети:</div>
+                              <div class="field__change">
+                                <div class="change__minus minus">-</div>
+                                <div class="change__number">0</div>
+                                <div class="change__pluse pluse">+</div>
+                              </div>
+                            </div>
+                          </div>
+                          <p class=""><button class="btn cbform__btn">Найти</button></p>     
+                          </form>
+                      </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div id="map" class="map"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+      	<div class="container">
+      		<div class="footer__content">
+      			<div class="footer__block-left">
+      				<p class="block-left__title">#visitSEDONA</p>
+      			</div>
+      			<div class="footer__social">
+      				<a href="#" class="social__link"><img src="images/social/t.png" alt=""></a>
+      				<a href="#" class="social__link"><img src="images/social/fb-icon.png" alt=""></a>
+      				<a href="#" class="social__link"><img src="images/social/youtube.png" alt=""></a>
+      			</div>
+      			<div class="footer__block-right">
+      				<div class="block-right__title">Website by</div>
+      				<div class="block-right__img" id="my">
+      					<img src="images/logo/logo_name.png" alt="">
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </footer>
+      
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--end script-->
+  </body>
+</html>

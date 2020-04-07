@@ -1,0 +1,538 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+//==================================================
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+html
+	height: 100%
+
+body 
+	height: 100%
+	font-family: 'PT Sans', sans-serif
+	color: #333333
+	font-family: "PT Sans"
+	font-size: 14px
+	font-weight: 400
+	line-height: 26px
+	text-transform: uppercase
+
+ul 
+	padding: 0
+li 
+	list-style: none
+a 
+	text-decoration: none
+h1
+	color: #000000
+	font-family: "PT Sans"
+	font-size: 21px
+	font-weight: 700
+	line-height: 26px
+	text-transform: uppercase
+	color: #333333
+h2 
+	color: #000000
+	font-family: "PT Sans"
+	font-size: 30px
+	font-weight: 700
+	line-height: 36px
+h3 
+	
+.btn
+	display: inline-block
+	padding: 20px 0
+	width: 100%
+	max-width: 467px
+	color: #ffffff
+	font-family: "PT Sans"
+	font-size: 21px
+	font-weight: 700
+	line-height: 21px
+	text-transform: uppercase
+	position: relative
+	cursor: pointer
+	background-color: #81b3d2
+	border: none
+	transition: $an
+	&:hover
+		background-color: #669ec0
+
+
+	&-b 
+		padding: 17px 197px 21px 197px
+		height: 58px
+	&-t
+		padding: 11px 0
+		width: 135px
+		color: #ffffff
+		font-size: 14px
+		font-weight: 400
+		line-height: 21px
+		text-transform: uppercase
+		background-color: transparent
+		border: 2px solid #ffffff
+		&:hover
+			color: #000
+			border: 2px solid #ffffff
+			background-color: #ffffff
+	&-bsm
+		width: 110px
+		height: 27px
+		color: #ffffff
+		font-family: "PT Sans"
+		font-size: 14px
+		font-weight: 700
+		line-height: 21px
+		text-transform: uppercase
+		background-color: #81b3d2
+		border: none
+		cursor: pointer
+		
+		&:hover
+			background-color: #669ec0
+	&-br
+		padding: 35px 0
+		max-width: 567px
+		font-size: 21px
+		font-weight: 700
+		line-height: 21px
+		background-color: #766357
+		&:hover
+			background-color: #604e43
+		@media screen and (max-width: $md4)
+			padding: 35px 0
+			width: 100%
+			font-size: 18px
+	&-brsm
+		padding: 0
+		height: 27px
+		width: 142px
+		color: #ffffff
+		font-family: "PT Sans"
+		font-size: 14px
+		font-weight: 700
+		line-height: 14px
+		text-transform: uppercase
+		background-color: #766357
+		&:hover
+			background-color: #604e43
+		
+.ibg 
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	img 
+		display: none
+
+.container
+	max-width: 1170px
+	margin: 0 auto
+	padding: 0 10px
+
+.wrapper
+	overflow: hidden
+	min-height: 100%
+	position: relative
+
+//=Main screen=========================
+
+.main
+	position: relative
+	
+	&__screen
+		text-align: center
+		position: relative
+		
+	&__screen-ibg
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+	&__screen-picture
+		z-index: 10
+		padding: 76px 10px 80px 
+		position: relative
+		@media screen and (max-width: $md4)
+			img
+				width: 100%
+			
+	&__screen-title
+		padding: 60px 0 38px
+		position: relative 
+		z-index: 10
+		@media screen and (max-width: $md4)
+			padding: 30px 0 20px
+	&__screen-subtitle
+		margin: -5px 0 0 0
+		padding: 0 0 56px
+		position: relative 
+		z-index: 10
+.main-screen__body-text
+	position: relative
+	background-color: #fff
+	padding: 0 10px
+.content
+	position: relative
+	
+//Block with photo
+
+.block
+	&__photo
+		text-align: center
+
+		display: flex
+		@media screen and (max-width: $md3)
+			flex-direction: column
+
+.photo
+	&__text
+		background-color: #81b3d2
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		flex: 1 0 35%
+		padding: 46px	60px 64px
+		@media screen and (max-width: $md2)
+			padding: 46px	20px 64px
+	&__text-2
+		order: 2
+	&__title
+		padding: 0	0 30px
+		color: #ffffff
+		text-transform: uppercase
+		font-size: 21px
+		font-weight: 700
+		max-width: 150px
+	&__number
+		padding: 0	0 30px
+		color: #ffffff
+		text-transform: uppercase
+		font-size: 21px
+		font-weight: 400
+		position: relative
+		display: flex
+		align-items: center
+		&:after
+			content: ""
+			position: absolute
+			left: -20px
+			display: block
+			width: 10px
+			height: 2px
+			background-color: #fff
+		&:before
+			content: ""
+			position: absolute
+			right: -20px
+			display: block
+			width: 10px
+			height: 2px
+			background-color: #fff
+	&__subtitle
+		color: #ffffff
+		text-transform: uppercase
+		font-size: 14px
+		font-weight: 400
+	&__img
+		height: 401px
+		width: 800px
+		@media screen and (max-width: $md3)
+			width: auto
+
+//=Block cards==========
+
+.block
+	&__cards
+		display: flex
+		flex-wrap: wrap
+
+.cards
+	&__item
+		flex: 1 0 33%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		padding: 60px 0 80px 
+		text-align: center
+		background-color: #eeeeee
+		@media screen and (max-width: $md4)
+			border-bottom: 1px solid #333
+	&__title
+		color: #000000
+		font-size: 21px
+		font-weight: 700
+		text-transform: uppercase
+		padding: 0 0 30px
+	&__number
+		font-size: 14px
+		font-weight: 400
+		padding: 0 0 30px
+		position: relative
+		display: flex
+		align-items: center
+		&:after
+			content: ""
+			position: absolute
+			left: -20px
+			display: block
+			width: 10px
+			height: 2px
+			background-color: #000
+		&:before
+			content: ""
+			position: absolute
+			right: -20px
+			display: block
+			width: 10px
+			height: 2px
+			background-color: #000
+	&__subtitle
+		font-size: 14px
+		font-weight: 400
+		width: 262px
+.item
+	&__img
+		padding: 0 0 29px
+	&__title
+		padding: 0 0 29px
+		color: #000000
+		font-size: 21px
+		font-weight: 700
+		line-height: 21px
+		text-transform: uppercase
+	&__subtitle
+		color: #333333
+		font-size: 14px
+		font-weight: 400
+		width: 284px
+
+//=Block contacts===================
+
+.contacts
+	text-align: center
+	
+	&__body
+		padding: 57px 0 0 
+		position: relative
+		
+	&__body-title
+		padding: 0 0 30px
+		text-transform: uppercase
+		color: #000000
+		font-size: 30px
+		font-weight: 700
+		@media screen and (max-width: $md4)
+			font-size: 27px
+	&__body-subtitle
+		padding: 0 0 50px
+		margin: 0 auto
+		width: 435px
+		font-weight: 400
+		line-height: 24px
+		text-transform: uppercase
+		color: #000000
+		@media screen and (max-width: $md3)
+			width: 100%
+.btn-br
+
+.map 
+	height: 594px
+
+//=Form=========================================
+.cbform
+	form 
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		flex-direction: column
+
+		@media screen and (max-width: $md2)
+			justify-content: left
+			flex-direction: column
+
+	&__container
+		padding: 80px 100px
+		@media screen and (max-width: $md3)
+			padding: 20px 25px
+	&__title
+		font-size: 45px
+		line-height: 45px
+		color: #000
+		font-weight: 500
+		padding: 0 0 40px
+		@media screen and (max-width: $md3)
+			flex: 40px
+			text-align: center
+			
+	&__form
+		
+	&__field
+		padding: 0 0 30px
+		display: inline-flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		width: 100%
+
+		&:last-of-type
+			margin: 30px 0 55px	
+			padding: 0
+		@media screen and (max-width: $md3)
+			max-width: 346px
+		label 
+			width: 115px
+			font-size: 16px
+			line-height: 18px
+			color: #000
+			font-weight: 600
+			@media screen and (max-width: $md3)
+				padding: 0 0 10px
+		input
+			width: 346px
+			height: 38px
+			background-color: #f2f2f2
+
+			padding: 0 0 0 17px
+			border: none
+			outline: none
+			color: #000000
+			font-size: 14px
+			font-weight: 700
+			line-height: 26px
+			text-transform: uppercase
+			transition: $an
+
+			&:hover
+				border: 2px solid #b4b9bb
+			&:focus
+				border: none
+			@media screen and (max-width: $md3)
+				width: 100%
+			&:active
+				background: #fff		
+		@media screen and (max-width: $md3)
+			flex-direction: column
+		img 
+			position: absolute
+			right: 10px
+	&__field-1
+		display: flex
+		width: 243px
+		height: 50px
+		justify-content: space-between
+		align-items: center
+
+
+	&__field-2
+		display: flex
+		width: 243px
+		height: 50px
+		justify-content: space-between
+		align-items: center
+		.field__title
+			padding: 0 0 0 30px
+.field
+	&__title
+		font-size: 16px
+		line-height: 18px
+		color: #000
+		font-weight: 600
+	&__change
+		display: flex
+		width: 114px
+
+	&__field-2
+		display: none
+.change
+	&__pluse
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 38px
+		height: 38px
+		font-size: 16px
+		line-height: 18px
+		color: #a9a9a9
+		font-weight: 600
+		padding: 15px
+		background-color: #f2f2f2
+		cursor: pointer
+		transition: $an
+		&:hover
+			color: #000 
+	&__minus
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 38px
+		height: 38px
+		font-size: 16px
+		line-height: 18px
+		color: #a9a9a9
+		font-weight: 600
+		padding: 15px
+		background-color: #f2f2f2
+		cursor: pointer
+		transition: $an
+		&:hover
+			color: #000 	
+	&__number
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 38px
+		height: 38px
+		font-size: 16px
+		line-height: 18px
+		color: #000
+		font-weight: 600
+		padding: 15px
+		background-color: #f2f2f2
+
+.popup 
+	display: none
+	position: absolute
+
+	
+	z-index: 100
+	margin: 0 auto
+	transform: translate(-50%, -50%)
+
+	&__container
+		padding: 50px
+		box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15)
+		background-color: #fff
+		@media screen and (max-width: $md3)
+			padding: 50px 15px
+	&.active
+		display: block
+		left: 50%
+		top: 170%
+		width: 100%
+		max-width: 567px
+		@media screen and (max-width: $md3)
+			top: 190%
+		@media screen and (max-width: $md4)
+			top: 183%
+
+.my1
+	fill: #cacaca
+	stroke: #000
+	cursor: pointer
+	width: 22px
+	height: 22px
+	position: absolute
+	right: 8px
+	&:hover
+		fill: #000
+	@media screen and (max-width: $md3)
+		top: 36px
+
+.popapp
+	max-width: 576px

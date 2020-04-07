@@ -1,0 +1,545 @@
+//=Filters==========================================
+
+.hotels
+	&__filter
+		position: relative
+		@media screen and (max-width: $md3)
+			margin: 57px 0 0 0
+	
+.filter
+	&__img
+		position: absolute
+		width: 100%
+		height: 100%
+
+
+	&__content
+		padding: 31px 0 0 
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+.check
+	&__boxes
+		display: flex
+		@media screen and (max-width: $md4)
+			flex-direction: column
+
+
+.range
+	&__block
+		padding: 0 0 45px 0
+		@media screen and (max-width: $md4)
+			width: 100%
+	&__title
+
+.slider
+	&__range-block
+
+	&__amount
+		display: flex
+#amount,
+#amount_1
+	text-align: left
+	
+.from
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+	width: 155px
+	&:after
+		content: ""
+		position: absolute
+		display: block
+		right: 0
+		width: 2px
+		height: 22px
+		background-color: #ffffff
+	@media screen and (max-width: $md4)
+		flex: 1 0 50%
+.to 
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 155px
+	@media screen and (max-width: $md4)
+		flex: 1 0 50%
+//=<!-- Блок с ползунком -->====================================================
+.range
+	&__block
+		position: relative
+		input
+			position: absolute
+			text-align: left
+			height: 37px
+			width: 40px
+			color: #fff
+			font-size: 14px
+			font-weight: 400
+			line-height: 21px
+			text-transform: uppercase
+			text-align: center
+
+			border: none
+			outline: none
+			background: transparent
+
+			transition: 0.4s cubic-bezier(0, 0.8, 0, 1)
+			position: relative
+			
+		label
+			margin-right: 4px
+			position: relative
+			display: flex
+			color: #ffffff
+			font-size: 14px
+			font-weight: 400
+			line-height: 14px
+			text-transform: uppercase
+	&__title
+		padding: 0 0 15px
+		color: #ffffff
+		font-size: 16px
+		font-weight: 700
+		line-height: 21px
+		text-transform: uppercase
+	&__btn
+		text-align: center
+			
+.slider
+	&__range-block
+		background: transparent
+		margin: 0 0 35px
+		max-width: 315px
+
+	&__amount
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin: 0 0 25px
+		border: 2px solid #ffffff
+
+.ui-slider-horizontal
+	&.ui-slider-range
+
+	height: 2px
+	background: #ffffff
+
+.ui-widget-header
+	background: #ffffff !important
+	height: 2px !important
+.ui-slider-horizontal
+	height: 2px !important
+.ui-widget-content 
+	height: 2px
+	border: none
+	background: #f7f3ec
+
+.ui-slider 
+	&.ui-slider-handle 
+		position: absolute
+
+		width: 25px
+		height: 25px
+
+		cursor: default
+		-ms-touch-action: none
+		touch-action: none
+		z-index: -1
+		
+
+span.ui-slider-handle.ui-corner-all.ui-state-default 
+	top: -11px
+
+	height: 25px
+	width: 25px
+
+	color: red
+	font-weight: normal
+
+	border: 10px solid #ffffff
+	background: #c5c5c5
+	border-radius: 50%
+//=<!-- Блок с ползунком -->====================================================
+
+
+//=<!-- Блок с ЧЕК-БОКСАМИ -->==================================================
+
+.check
+
+	&__title
+		padding: 0 0 28px
+		color: #ffffff
+		font-size: 16px
+		font-weight: 700
+		line-height: 21px
+		text-transform: uppercase
+		position: relative
+		
+	&__block
+		padding: 0 0 45px
+		order: 3
+	&__checkbox
+		position: relative
+		display: flex
+		flex-direction: column
+		margin-right: 115px
+		li 
+			margin: 23px 0
+			position: relative
+			display: flex
+			align-items: center
+		input
+			position: relative
+			height: 23px
+			width: 23px
+
+			background: #ffffff
+			border: 1px solid #e5e5e5
+		label
+			padding-left: 35px
+			color: #ffffff
+			font-family: "PT Sans"
+			font-size: 14px
+			font-weight: 400
+			line-height: 21px
+			text-transform: uppercase
+			&:before 
+				content: ""
+
+				position: absolute
+
+				display: block
+				width: 23px
+				height: 23px
+				padding: 5px
+				border-radius: 4px
+				cursor: pointer
+				opacity: 0.8
+				
+		input[type="checkbox"] 
+			display: none
+			&:checked + label:before
+				content: ""
+
+				position: absolute
+				top: -1px
+				left: 0px
+				padding: 5px
+				background-image: url("../images/hotels/checkbox-on.png")
+				background-repeat: no-repeat
+				background-position: 0 0
+				
+			& + label:hover:before
+				opacity: 1
+			& + label:before
+				content: ""
+
+				position: absolute
+				top: -1px
+				left: 0px
+
+				background-image: url("../images/hotels/checkbox-off.png")
+				background-repeat: no-repeat
+				background-position: 0 0
+				
+			& + label:hover:before
+				opacity: 1
+
+			&:last-child
+				margin: 0
+//=<!-- Блок с ЧЕК-БОКСАМИ -->==================================================
+//=Hotel cards====================================
+.hotels__cards
+	height: 500px
+	width: 100%
+	background-color: #fff
+
+//=<!-- Блок с СОРТИРОВКОЙ -->==================================================
+.content
+	&__body-content
+
+	&__title
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 0 0 50px
+		@media screen and (max-width: $md2)
+			flex-direction: column
+			justify-content: center
+			padding: 0 0 10px
+		@media screen and (max-width: $md3)
+			padding: 0 0 25px	
+.left__block-1
+	@media screen and (max-width: $md2)
+		padding: 0 0 20px
+.right__block-2
+	display: flex
+	justify-content: space-between 
+	width: 100%
+	@media screen and (max-width: $md2)
+		width: 100%
+.left
+	&__block
+		color: #000000
+		font-family: "PT Sans"
+		font-size: 12px
+		font-weight: 400
+		line-height: 18px
+.middle
+	&__block
+		display: flex
+		align-items: baseline
+		text-transform: uppercase
+		font-size: 14px
+		line-height: 18px
+		color: #ededed
+		input:checked + label 
+			color: $bl
+
+		label 
+			color: #000000
+			font-family: "PT Sans"
+			font-size: 12px
+			font-weight: 400
+			line-height: 18px
+			cursor: pointer
+			border-bottom: 1px dotted $bl
+			transition: $an
+			&:hover
+				color: #81b3d2
+		@media screen and (max-width: $md2)
+			// margin: 0 20px 0 0
+			flex-wrap: wrap
+		@media screen and (max-width: $md4)
+			flex-direction: column
+			justify-content: left
+			align-items: flex-start
+	&__block2
+		@media screen and (max-width: $md3)
+			padding: 0 10px 0 0
+	&__block-radio
+		margin: 0 33px 0 0
+		input[type=radio]
+			display: none
+		&:last-child
+			margin: 0
+		@media screen and (max-width: $md2)
+			margin: 0 12px 0 0
+		@media screen and (max-width: $md4)
+			margin: 0 12px 15px 0
+.right
+	&__block
+		display: flex
+		align-items: center
+		input
+			display: none
+		label
+			padding-right: 15px
+
+			font-family: FontAwesome
+			font-size: 20px
+
+			cursor: pointer
+			@media screen and (max-width: $md3)
+					padding: 0 25px 0 0
+			&:last-child
+				padding: 0
+				@media screen and (max-width: $md3)
+					padding: 0 15px 0 0
+			@media screen and (max-width: $md4)
+				padding: 95px 15px 0 0	
+		input:checked + label 
+			.sort-up,
+			.sort-down
+  				fill: #81b3d2
+
+.sort-up
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 10px
+	height:  10px
+	fill: #cacaca
+	transition: $an
+	&:hover
+		fill: #000000
+	&.active
+		fill: #81b3d2
+.sort-down
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 10px
+	height:  10px
+	fill: #cacaca
+	transition: $an
+	&:hover
+		fill: #000000
+	&.active
+		fill: #81b3d2
+
+.hotels
+	&__content
+		display: flex
+		justify-content: space-between
+		@media screen and (max-width: $md3)
+			flex-direction: column
+			justify-content: center
+.content
+	&__title
+		padding: 33px 0 
+		color: #000000
+		font-family: "PT Sans"
+		font-size: 21px
+		font-weight: 700
+		line-height: 26px
+		text-transform: uppercase
+	&__subtitle
+		padding: 0 50px 0 0
+		color: #000000
+		font-family: "PT Sans"
+		font-size: 21px
+		font-weight: 700
+		line-height: 26px
+		text-transform: uppercase
+		@media screen and (max-width: $md4)
+			padding: 0 0 30px 0
+	&__body-content
+		width: 100%
+
+.right
+	&__block-2
+
+	&__block
+		@media screen and (max-width: $md4)
+			flex-direction: column
+			justify-content: space-between
+			align-items: flex-start
+.middle
+	&__block
+
+	&__block-title
+		color: #000000
+		font-family: "PT Sans"
+		font-size: 12px
+		font-weight: 400
+		line-height: 12px
+		text-transform: uppercase
+		padding: 0 40px 0 0
+		@media screen and (max-width: $md4)
+			padding: 0 40px 30px 0
+
+.cadrs
+	&__block
+		border-bottom: 1px solid $g1
+
+.block-cards
+	&__left
+		display: flex
+		align-items: center
+	&__img
+		height: 100%
+		width: 135px
+	&__right
+
+
+.left-content-title
+	padding: 0 0 17px
+	color: #000000
+	font-family: "PT Sans"
+	font-size: 21px
+	font-weight: 700
+	line-height: 21px
+	text-transform: uppercase
+	transition: $an
+	&:hover
+		color: #81b3d2
+
+.content
+	&__hotel-title
+		color: #333333
+		font-family: "PT Sans"
+		font-size: 14px
+		font-weight: 400
+		line-height: 14px
+		text-transform: uppercase
+		padding: 0 0 18px
+	&__hotel-btn
+
+	&__price-title
+		color: #333333
+		font-family: "PT Sans"
+		font-size: 14px
+		font-weight: 400
+		line-height: 14px
+		text-transform: uppercase
+		padding: 0 0 18px
+	&__cards
+		padding: 0 0 190px
+
+
+.cards
+	&__block-cards
+		padding: 30px 0
+		border-bottom: 1px solid $g1
+	&__left-content
+		display: flex
+		flex-direction: column
+		@media screen and (max-width: $md4)
+			text-align: center
+			
+	&__right-img
+
+	&__right-block
+		padding: 5px 16px
+		color: #666665
+		font-family: "PT Sans"
+		font-size: 14px
+		font-weight: 400
+		line-height: 14px
+		text-transform: uppercase
+		background-color: #f2f2f2
+.block-cards
+	&__left
+		@media screen and (max-width: $md3)
+			padding: 0 0 10px
+		@media screen and (max-width: $md4)
+			justify-content: space-between
+			width: 100%
+			flex-direction: column
+			order: 1
+
+	&__img
+		margin: 0 30px 0 0
+		height: 100%
+		@media screen and (max-width: $md3)
+			padding: 90px
+		@media screen and (max-width: $md4)
+			margin: 0 0 30px
+			flex: 1 0 100%
+			padding: 90px
+	&__right
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		justify-content: space-between
+		@media screen and (max-width: $md3)
+			margin: 0 0 10px
+			align-items: center
+			justify-content: center
+
+.left-content
+	&__body
+		display: flex
+	&__hotel
+		margin: 0 6px 0 0
+
+.block-cards__wrap
+	display: flex 
+	justify-content: space-between 
+	@media screen and (max-width: $md3)
+		flex-wrap: wrap 
+	@media screen and (max-width: $md4)
+		flex-direction: column 
+		align-items: center 
